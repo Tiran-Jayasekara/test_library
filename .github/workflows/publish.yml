@@ -1,31 +1,23 @@
-name: Publish to NPM
+name: Publish Package
 
 on:
-  release:
-    types: [created] # Triggers when you create a "Release" on GitHub
+  push:
+    tags:
+      - "v*"
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: '24' # Move to the latest LTS
-          registry-url: 'https://registry.npmjs.org'
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
 
-      - name: Update NPM to latest
-        run: npm install -g npm@latest # Fixes the "Token expired" handshake bug
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Library
-        run: npm run build
-
-      - name: Publish to NPM
-        run: npm publish
+      - run: npm install
+      - run: npm run build
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
