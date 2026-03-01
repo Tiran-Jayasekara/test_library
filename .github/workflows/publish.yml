@@ -13,17 +13,17 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '24' # Move to the latest LTS
           registry-url: 'https://registry.npmjs.org'
 
       - name: Update NPM to latest
-        run: npm install -g npm@latest
+        run: npm install -g npm@latest # Fixes the "Token expired" handshake bug
 
       - name: Install dependencies
         run: npm install
 
       - name: Build Library
-        run: npm run build # Ensure your package.json has a build script
+        run: npm run build
 
       - name: Publish to NPM
         run: npm publish
