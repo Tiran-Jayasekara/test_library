@@ -1,5 +1,5 @@
 {
-  "name": "@tiranjayasekara/my-custom-tool-2026",
+  "name": "@hashbaze/my-custom-tool-2026",
   "version": "1.0.4",
   "type": "module",
   "main": "./dist/index.js",
