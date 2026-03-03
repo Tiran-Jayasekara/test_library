@@ -1,6 +1,6 @@
 {
   "name": "@restingowlorg/my-custom-tool-2026",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,6 +15,6 @@
     "typescript": "^5.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   }
 }
