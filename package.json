@@ -1,6 +1,6 @@
 {
   "name": "@restingowlorg/my-custom-tool-2026",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
