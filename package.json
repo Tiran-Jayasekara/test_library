@@ -1,6 +1,6 @@
 {
-  "name": "@tiran/my-test-lib",
-  "version": "1.0.9",
+  "name": "@tiranjayasekara/my-custom-tool-2026",
+  "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
